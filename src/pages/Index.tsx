@@ -1,6 +1,8 @@
 import Cabecalho from '@/components/Cabecalho';
 import SecaoHero from '@/components/SecaoHero';
 import SecaoBeneficios from '@/components/SecaoBeneficios';
+import SectionDAEA from "../components/SecaoDAEA";
+import SecaoFinal from "../components/SecaoFinal";
 
 const Index = () => {
   return (
@@ -9,6 +11,8 @@ const Index = () => {
       <main>
         <SecaoHero />
         <SecaoBeneficios />
+        <SectionDAEA />
+        <SecaoFinal />
       </main>
     </div>
   );

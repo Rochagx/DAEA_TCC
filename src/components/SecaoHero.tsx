@@ -4,9 +4,16 @@ import {
   faReact, 
   faAws, 
   faGithub,
-  faOpenai
+  faOpenai,
+  IconDefinition
 } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
+
+interface Parceiro {
+  icon: string | IconDefinition;
+  name: string;
+  type: 'fontawesome' | 'custom';
+}
 
 const CustomIcon = ({ src, alt, className }: { src: string; alt: string; className: string }) => (
   <img 
@@ -20,7 +27,7 @@ const CustomIcon = ({ src, alt, className }: { src: string; alt: string; classNa
 );
 
 const SecaoHero = () => {
-  const parceiros = [
+  const parceiros: Parceiro[] = [
     { icon: faReact, name: 'React', type: 'fontawesome' },
     { 
       icon: '/assets/icons/tailwindCss.svg', 
@@ -132,7 +139,7 @@ const SecaoHero = () => {
               >
                 {parceiro.type === 'fontawesome' ? (
                   <FontAwesomeIcon 
-                    icon={parceiro.icon as any} 
+                    icon={parceiro.icon as IconDefinition} 
                     className="text-3xl md:text-4xl text-muted-foreground" 
                   />
                 ) : (

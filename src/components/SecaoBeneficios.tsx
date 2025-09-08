@@ -28,7 +28,7 @@ const SecaoBeneficios = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
+
         <motion.div 
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -46,7 +46,6 @@ const SecaoBeneficios = () => {
           </p>
         </motion.div>
 
-        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {beneficios.map((beneficio, index) => (
             <motion.div
@@ -58,7 +57,7 @@ const SecaoBeneficios = () => {
               whileHover={{ y: -5, scale: 1.02 }}
               className="bg-card rounded-lg shadow-lg overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
             >
-              {/* Card Image */}
+
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={beneficio.image} 
@@ -67,7 +66,6 @@ const SecaoBeneficios = () => {
                 />
               </div>
 
-              {/* Card Content */}
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-bold text-foreground">
                   {beneficio.title}
