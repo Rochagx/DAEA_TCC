@@ -1,8 +1,13 @@
 import React from 'react';
 import imagemEsquerda from '../assets/tecnologia-daea-circular.png';
 import imagemDireita from '../assets/comunidade-daea-circular.png';
+import imagemJogo from '../assets/A Cidade Submersa do Mistério.png';
 
 const SecaoFinal = () => {
+  const handleJogarClick = () => {
+    window.open('https://the-last-wave-game.vercel.app', '_blank');
+  };
+
   return (
     <>
       <section className="relative overflow-hidden py-20 px-6 lg:px-8 bg-gray-50">
@@ -137,19 +142,45 @@ const SecaoFinal = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-            Transforme Sua Rua em um Espaço Mais Seguro
-          </h2>
-          <p className="text-lg lg:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Com a ajuda do app DAEA, você participa de soluções reais para 
-            prevenir enchentes no seu bairro. Baixe um clique para começar.
-          </p>
-          <button 
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-          >
-            BAIXAR APLICATIVO
-          </button>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                Experimente os Desafios das Enchentes
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-600 mb-10 leading-relaxed">
+                Antes de implementar o DAEA na sua comunidade, teste seus conhecimentos sobre enchentes urbanas em "The Last Wave". Domine a fúria das águas e entenda como nossa tecnologia pode fazer a diferença.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button 
+                  onClick={handleJogarClick}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  ENFRENTAR AS ONDAS
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex-shrink-0 order-1 lg:order-2">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-teal-600 rounded-2xl transform rotate-3 opacity-20"></div>
+                <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
+                  <img 
+                    src={imagemJogo} 
+                    alt="Screenshot do jogo The Last Wave - Simulação de enchentes urbanas"
+                    className="w-80 h-60 lg:w-96 lg:h-72 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
+                    The Last Wave
+                  </div>
+                  <div className="absolute bottom-4 right-4 bg-blue-600 text-white text-xs px-2 py-1 rounded-md font-semibold">
+                    Jogar Grátis
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
